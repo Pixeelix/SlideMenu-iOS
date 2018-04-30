@@ -29,6 +29,8 @@
     
     // set the player to 1
     playerTurn = 1;
+    //set movesCounter to 0;
+    movesCounter = 0;
     //update the label
     whoseTurn.text = @"X will start the game";
 }
@@ -39,7 +41,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+// MAP //
 - (IBAction)setMap:(id)sender
 {
     switch (((UISegmentedControl *)sender).selectedSegmentIndex) {
@@ -55,6 +57,7 @@
     }
 }
 
+// TIC TAC TOE GAME //
 -(void) updatePlayerInfo
 {
     if (playerTurn == 1)
@@ -79,6 +82,17 @@
         [someOneWon addAction:okAction];
         [self presentViewController:someOneWon animated:YES completion:nil];
         [self resetBoard];
+    }
+    
+    if ([self checkForDraw])
+    {
+        UIAlertController *itIsDraw= [UIAlertController alertControllerWithTitle:@"Draw" message:@"Nobody won" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+            // Ok action example
+        }];
+        [itIsDraw addAction:okAction];
+        [self presentViewController:itIsDraw animated:YES completion:nil];
+        [self resetBoard];
         
     }
 }
@@ -92,46 +106,55 @@
     {
         if(playerTurn == 1){ s1.image = xImg; }
         if(playerTurn == 2){ s1.image = oImg; }
+        movesCounter += 1;
     }
     if(CGRectContainsPoint([s2 frame], [touch locationInView: self.view]))
     {
         if(playerTurn == 1){ s2.image = xImg; }
         if(playerTurn == 2){ s2.image = oImg; }
+        movesCounter += 1;
     }
     if(CGRectContainsPoint([s3 frame], [touch locationInView: self.view]))
     {
         if(playerTurn == 1){ s3.image = xImg; }
         if(playerTurn == 2){ s3.image = oImg; }
+        movesCounter += 1;
     }
     if(CGRectContainsPoint([s4 frame], [touch locationInView: self.view]))
     {
         if(playerTurn == 1){ s4.image = xImg; }
         if(playerTurn == 2){ s4.image = oImg; }
+        movesCounter += 1;
     }
     if(CGRectContainsPoint([s5 frame], [touch locationInView: self.view]))
     {
         if(playerTurn == 1){ s5.image = xImg; }
         if(playerTurn == 2){ s5.image = oImg; }
+        movesCounter += 1;
     }
     if(CGRectContainsPoint([s6 frame], [touch locationInView: self.view]))
     {
         if(playerTurn == 1){ s6.image = xImg; }
         if(playerTurn == 2){ s6.image = oImg; }
+        movesCounter += 1;
     }
     if(CGRectContainsPoint([s7 frame], [touch locationInView: self.view]))
     {
         if(playerTurn == 1){ s7.image = xImg; }
         if(playerTurn == 2){ s7.image = oImg; }
+        movesCounter += 1;
     }
     if(CGRectContainsPoint([s8 frame], [touch locationInView: self.view]))
     {
         if(playerTurn == 1){ s8.image = xImg; }
         if(playerTurn == 2){ s8.image = oImg; }
+        movesCounter += 1;
     }
     if(CGRectContainsPoint([s9 frame], [touch locationInView: self.view]))
     {
         if(playerTurn == 1){ s9.image = xImg; }
         if(playerTurn == 2){ s9.image = oImg; }
+        movesCounter += 1;
     }
     [self updatePlayerInfo];
 }
@@ -150,6 +173,7 @@
     s9.image = NULL;
     //Reset the player and update the label
     playerTurn = 1;
+    movesCounter = 0;
     whoseTurn.text =@"X is going to start again.";
 }
 
@@ -187,6 +211,15 @@
         return TRUE;
     }
     if((s3.image == s5.image) & (s5.image == s7.image) & (s3.image != NULL))
+    {
+        return TRUE;
+    }
+    return FALSE;
+}
+
+-(BOOL) checkForDraw
+{
+    if(movesCounter == 9)
     {
         return TRUE;
     }

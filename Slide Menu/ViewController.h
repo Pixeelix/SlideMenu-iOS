@@ -17,6 +17,8 @@
     IBOutlet UIImage *oImg;
     IBOutlet UIImage *xImg;
     int playerTurn;
+    int movesCounter;
+    
 }
 
 @property(strong,nonatomic) IBOutlet MKMapView *mapview;
@@ -44,6 +46,7 @@
 -(void) updatePlayerInfo;
 -(void) resetBoard;
 -(BOOL) checkForWin;
+-(BOOL) checkForDraw;
 
 
 @end
