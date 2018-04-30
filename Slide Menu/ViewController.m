@@ -31,6 +31,16 @@
     playerTurn = 1;
     //set movesCounter to 0;
     movesCounter = 0;
+    //set all image boxes at the board NOT CLICKED
+    s1Clicked = FALSE;
+    s2Clicked = FALSE;
+    s3Clicked = FALSE;
+    s4Clicked = FALSE;
+    s5Clicked = FALSE;
+    s6Clicked = FALSE;
+    s7Clicked = FALSE;
+    s8Clicked = FALSE;
+    s9Clicked = FALSE;
     //update the label
     whoseTurn.text = @"X will start the game";
 }
@@ -102,61 +112,79 @@
 {
     UITouch *touch = [[event allTouches]anyObject];
     //check which UIImage view was touched
-    if(CGRectContainsPoint([s1 frame], [touch locationInView: self.view]))
+    if((CGRectContainsPoint([s1 frame], [touch locationInView: self.view]))&& s1Clicked == FALSE)
     {
         if(playerTurn == 1){ s1.image = xImg; }
         if(playerTurn == 2){ s1.image = oImg; }
         movesCounter += 1;
+        s1Clicked = TRUE;
+        [self updatePlayerInfo];
     }
-    if(CGRectContainsPoint([s2 frame], [touch locationInView: self.view]))
+    if((CGRectContainsPoint([s2 frame], [touch locationInView: self.view])) && s2Clicked == FALSE)
     {
         if(playerTurn == 1){ s2.image = xImg; }
         if(playerTurn == 2){ s2.image = oImg; }
         movesCounter += 1;
+        s2Clicked = TRUE;
+        [self updatePlayerInfo];
     }
-    if(CGRectContainsPoint([s3 frame], [touch locationInView: self.view]))
+    if((CGRectContainsPoint([s3 frame], [touch locationInView: self.view])) && s3Clicked == FALSE)
     {
         if(playerTurn == 1){ s3.image = xImg; }
         if(playerTurn == 2){ s3.image = oImg; }
         movesCounter += 1;
+        s3Clicked = TRUE;
+        [self updatePlayerInfo];
     }
-    if(CGRectContainsPoint([s4 frame], [touch locationInView: self.view]))
+    if((CGRectContainsPoint([s4 frame], [touch locationInView: self.view])) && s4Clicked == FALSE)
     {
         if(playerTurn == 1){ s4.image = xImg; }
         if(playerTurn == 2){ s4.image = oImg; }
         movesCounter += 1;
+        s4Clicked = TRUE;
+        [self updatePlayerInfo];
     }
-    if(CGRectContainsPoint([s5 frame], [touch locationInView: self.view]))
+    if((CGRectContainsPoint([s5 frame], [touch locationInView: self.view])) && s5Clicked == FALSE)
     {
         if(playerTurn == 1){ s5.image = xImg; }
         if(playerTurn == 2){ s5.image = oImg; }
         movesCounter += 1;
+        s5Clicked = TRUE;
+        [self updatePlayerInfo];
     }
-    if(CGRectContainsPoint([s6 frame], [touch locationInView: self.view]))
+    if((CGRectContainsPoint([s6 frame], [touch locationInView: self.view])) && s6Clicked == FALSE)
     {
         if(playerTurn == 1){ s6.image = xImg; }
         if(playerTurn == 2){ s6.image = oImg; }
         movesCounter += 1;
+        s6Clicked = TRUE;
+        [self updatePlayerInfo];
     }
-    if(CGRectContainsPoint([s7 frame], [touch locationInView: self.view]))
+    if((CGRectContainsPoint([s7 frame], [touch locationInView: self.view])) && s7Clicked == FALSE)
     {
         if(playerTurn == 1){ s7.image = xImg; }
         if(playerTurn == 2){ s7.image = oImg; }
         movesCounter += 1;
+        s7Clicked = TRUE;
+        [self updatePlayerInfo];
     }
-    if(CGRectContainsPoint([s8 frame], [touch locationInView: self.view]))
+    if((CGRectContainsPoint([s8 frame], [touch locationInView: self.view])) && s8Clicked == FALSE)
     {
         if(playerTurn == 1){ s8.image = xImg; }
         if(playerTurn == 2){ s8.image = oImg; }
         movesCounter += 1;
+        s8Clicked = TRUE;
+        [self updatePlayerInfo];
     }
-    if(CGRectContainsPoint([s9 frame], [touch locationInView: self.view]))
+    if((CGRectContainsPoint([s9 frame], [touch locationInView: self.view])) && s9Clicked == FALSE)
     {
         if(playerTurn == 1){ s9.image = xImg; }
         if(playerTurn == 2){ s9.image = oImg; }
         movesCounter += 1;
+        s9Clicked = TRUE;
+        [self updatePlayerInfo];
     }
-    [self updatePlayerInfo];
+    
 }
 
 -(void) resetBoard
@@ -171,6 +199,16 @@
     s7.image = NULL;
     s8.image = NULL;
     s9.image = NULL;
+    //Set all image boxes at the board to NOT CLICKED
+    s1Clicked = FALSE;
+    s2Clicked = FALSE;
+    s3Clicked = FALSE;
+    s4Clicked = FALSE;
+    s5Clicked = FALSE;
+    s6Clicked = FALSE;
+    s7Clicked = FALSE;
+    s8Clicked = FALSE;
+    s9Clicked = FALSE;
     //Reset the player and update the label
     playerTurn = 1;
     movesCounter = 0;

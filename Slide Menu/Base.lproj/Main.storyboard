@@ -196,7 +196,7 @@
                         <viewLayoutGuide key="safeArea" id="L3F-8e-QhD"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Dz-VK-235">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="aQB-cx-n13"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt;- List" id="aQB-cx-n13"/>
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="aQB-cx-n13" id="1MF-hf-saL"/>
@@ -280,7 +280,7 @@
                         <viewLayoutGuide key="safeArea" id="ClI-bL-OKi"/>
                     </view>
                     <navigationItem key="navigationItem" id="0ki-p8-RNh">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="GIZ-R0-gxo"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt;- List" id="GIZ-R0-gxo"/>
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="GIZ-R0-gxo" id="PYR-8z-onc"/>

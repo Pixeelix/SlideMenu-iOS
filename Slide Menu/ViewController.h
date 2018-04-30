@@ -16,8 +16,19 @@
     
     IBOutlet UIImage *oImg;
     IBOutlet UIImage *xImg;
+    
     int playerTurn;
     int movesCounter;
+    
+    BOOL s1Clicked;
+    BOOL s2Clicked;
+    BOOL s3Clicked;
+    BOOL s4Clicked;
+    BOOL s5Clicked;
+    BOOL s6Clicked;
+    BOOL s7Clicked;
+    BOOL s8Clicked;
+    BOOL s9Clicked;
     
 }
 
@@ -32,13 +43,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *s7;
 @property (weak, nonatomic) IBOutlet UIImageView *s8;
 @property (weak, nonatomic) IBOutlet UIImageView *s9;
-
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
 
 - (IBAction)setMap:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIImageView *board;
-
 @property (weak, nonatomic) IBOutlet UILabel *whoseTurn;
 
 - (IBAction)resetBtn:(UIButton *)sender;
