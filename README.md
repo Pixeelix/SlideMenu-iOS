@@ -2,5 +2,5 @@
 ---
 Including slide menu and different view panels. 
 * Home 
-* Maps
+* Map
 * Tic-Tac-Toe Game 
