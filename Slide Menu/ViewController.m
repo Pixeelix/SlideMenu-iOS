@@ -9,21 +9,28 @@
 #import "ViewController.h"
 #import "SWRevealViewController.h"
 
-@interface ViewController ()
-
-@end
 
 @implementation ViewController
+
+@synthesize whoseTurn, s1, s2, s3, s4, s5, s6, s7, s8, s9;
 
 @synthesize mapview = _mapview;
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
     _barButton.target = self.revealViewController;
     _barButton.action = @selector(revealToggle:);
-    
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    oImg = [UIImage imageNamed: @"Nought.png"];
+    xImg = [UIImage imageNamed: @"Cross.png"];
+    
+    // set the player to 1
+    playerTurn = 1;
+    //update the label
+    whoseTurn.text = @"X will start the game";
 }
 
 
@@ -48,9 +55,96 @@
     }
 }
 
-- (IBAction)action:(UIButton *)sender {
+-(void) updatePlayerInfo
+{
+    if (playerTurn == 1)
+    {
+        playerTurn = 2;
+        whoseTurn.text = @"It is O turn";
+        NSLog(@"player is = %i", playerTurn);
+    }
+    else if (playerTurn == 2)
+    {
+        playerTurn = 1;
+        whoseTurn.text = @"It is X turn";
+        NSLog(@"player is = %i", playerTurn);
+    }
 }
 
-- (IBAction)action:(id)sender {
+//the touch event for tic-tac-toe game
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches]anyObject];
+    //check which UIImage view was touched
+    if(CGRectContainsPoint([s1 frame], [touch locationInView: self.view]))
+    {
+        if(playerTurn == 1){ s1.image = xImg; }
+        if(playerTurn == 2){ s1.image = oImg; }
+    }
+    if(CGRectContainsPoint([s2 frame], [touch locationInView: self.view]))
+    {
+        if(playerTurn == 1){ s2.image = xImg; }
+        if(playerTurn == 2){ s2.image = oImg; }
+    }
+    if(CGRectContainsPoint([s3 frame], [touch locationInView: self.view]))
+    {
+        if(playerTurn == 1){ s3.image = xImg; }
+        if(playerTurn == 2){ s3.image = oImg; }
+    }
+    if(CGRectContainsPoint([s4 frame], [touch locationInView: self.view]))
+    {
+        if(playerTurn == 1){ s4.image = xImg; }
+        if(playerTurn == 2){ s4.image = oImg; }
+    }
+    if(CGRectContainsPoint([s5 frame], [touch locationInView: self.view]))
+    {
+        if(playerTurn == 1){ s5.image = xImg; }
+        if(playerTurn == 2){ s5.image = oImg; }
+    }
+    if(CGRectContainsPoint([s6 frame], [touch locationInView: self.view]))
+    {
+        if(playerTurn == 1){ s6.image = xImg; }
+        if(playerTurn == 2){ s6.image = oImg; }
+    }
+    if(CGRectContainsPoint([s7 frame], [touch locationInView: self.view]))
+    {
+        if(playerTurn == 1){ s7.image = xImg; }
+        if(playerTurn == 2){ s7.image = oImg; }
+    }
+    if(CGRectContainsPoint([s8 frame], [touch locationInView: self.view]))
+    {
+        if(playerTurn == 1){ s8.image = xImg; }
+        if(playerTurn == 2){ s8.image = oImg; }
+    }
+    if(CGRectContainsPoint([s9 frame], [touch locationInView: self.view]))
+    {
+        if(playerTurn == 1){ s9.image = xImg; }
+        if(playerTurn == 2){ s9.image = oImg; }
+    }
+    [self updatePlayerInfo];
 }
+
+-(void) resetBoard
+{
+    //Cleare the images stored in the UIImageView
+    s1.image = NULL;
+    s2.image = NULL;
+    s3.image = NULL;
+    s4.image = NULL;
+    s5.image = NULL;
+    s6.image = NULL;
+    s7.image = NULL;
+    s8.image = NULL;
+    s9.image = NULL;
+    //Reset the player and update the label
+    playerTurn = 1;
+    whoseTurn.text =@"X is going to start again.";
+    
+}
+
+- (IBAction)resetBtn:(UIButton *)sender
+{
+    [self resetBoard];
+}
+
 @end

@@ -87,7 +87,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="49.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Third title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pRI-Fx-yp3">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Trips-traps-trull" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pRI-Fx-yp3">
                                             <rect key="frame" x="20" y="0.0" width="374" height="49.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
@@ -137,8 +137,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NH-9f-V8Y">
-                                <rect key="frame" x="184" y="358" width="46" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Antud app sisaldab: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NH-9f-V8Y">
+                                <rect key="frame" x="20" y="265" width="374" height="207"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gM-su-Ci6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2574" y="517"/>
+            <point key="canvasLocation" x="2573.913043478261" y="516.84782608695662"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sGj-6e-KWy">
@@ -215,80 +215,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Board" translatesAutoresizingMaskIntoConstraints="NO" id="Sdn-vi-uec">
-                                <rect key="frame" x="0.0" y="216" width="414" height="414"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Board" translatesAutoresizingMaskIntoConstraints="NO" id="rfw-DB-HAJ">
+                                <rect key="frame" x="0.0" y="161" width="414" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQY-Xa-mi6">
-                                <rect key="frame" x="152" y="507" width="110" height="110"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TGC-HI-GEr">
+                                <rect key="frame" x="150" y="311" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Cross"/>
-                                <connections>
-                                    <action selector="action:" destination="rLE-nt-yTm" eventType="touchUpInside" id="Nu0-6J-Jbh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uy-bh-rWd">
-                                <rect key="frame" x="152" y="368" width="110" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuw-zg-iaE">
+                                <rect key="frame" x="13" y="171" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Cross"/>
-                                <connections>
-                                    <action selector="action:" destination="rLE-nt-yTm" eventType="touchUpInside" id="tjR-1q-vRJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3t-eg-66i">
-                                <rect key="frame" x="292" y="368" width="110" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSB-rd-duo">
+                                <rect key="frame" x="150" y="171" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Cross"/>
-                                <connections>
-                                    <action selector="action:" destination="rLE-nt-yTm" eventType="touchUpInside" id="2u8-D8-cxQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe7-dp-Gtz">
-                                <rect key="frame" x="12" y="507" width="110" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7V9-0T-0xC">
+                                <rect key="frame" x="288" y="171" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Cross"/>
-                                <connections>
-                                    <action selector="action:" destination="rLE-nt-yTm" eventType="touchUpInside" id="RDF-aA-brf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqf-5O-cbL">
-                                <rect key="frame" x="12" y="368" width="110" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHn-ch-h2J">
+                                <rect key="frame" x="288" y="311" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Cross"/>
-                                <connections>
-                                    <action selector="action:" destination="rLE-nt-yTm" eventType="touchUpInside" id="QMB-aw-e12"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvT-Vp-qdR">
-                                <rect key="frame" x="292" y="231" width="110" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jTI-gc-wM3">
+                                <rect key="frame" x="13" y="311" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Cross"/>
-                                <connections>
-                                    <action selector="action:" destination="rLE-nt-yTm" eventType="touchUpInside" id="ddw-ts-B5l"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oW-bT-gDy">
-                                <rect key="frame" x="152" y="231" width="110" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKe-bO-Ox0">
+                                <rect key="frame" x="13" y="450" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Cross"/>
-                                <connections>
-                                    <action selector="action:" destination="rLE-nt-yTm" eventType="touchUpInside" id="rSP-rT-F3D"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5n-fZ-tpY">
-                                <rect key="frame" x="12" y="231" width="110" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T4z-sx-CWw">
+                                <rect key="frame" x="150" y="450" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Cross"/>
-                                <connections>
-                                    <action selector="action:" destination="rLE-nt-yTm" eventType="touchUpInside" id="Rzl-Ji-kp5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLJ-Bz-NQt">
-                                <rect key="frame" x="292" y="507" width="110" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9YL-zM-sgk">
+                                <rect key="frame" x="288" y="450" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Cross"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tch-7S-F5C">
+                                <rect key="frame" x="0.0" y="82" width="265" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srY-1X-XB4">
+                                <rect key="frame" x="260" y="604" width="154" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="action:" destination="rLE-nt-yTm" eventType="touchUpInside" id="9TG-EK-iDg"/>
+                                    <action selector="resetBtn:" destination="rLE-nt-yTm" eventType="touchUpInside" id="8XA-OC-lf6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -300,6 +284,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="GIZ-R0-gxo" id="PYR-8z-onc"/>
+                        <outlet property="board" destination="rfw-DB-HAJ" id="bmn-fL-2iS"/>
+                        <outlet property="s1" destination="yuw-zg-iaE" id="cJg-7g-W0d"/>
+                        <outlet property="s2" destination="wSB-rd-duo" id="iFC-l0-ImT"/>
+                        <outlet property="s3" destination="7V9-0T-0xC" id="Ttz-u1-ege"/>
+                        <outlet property="s4" destination="jTI-gc-wM3" id="Jd2-UW-yFF"/>
+                        <outlet property="s5" destination="TGC-HI-GEr" id="FSX-8Z-gaI"/>
+                        <outlet property="s6" destination="WHn-ch-h2J" id="KCY-AA-lmz"/>
+                        <outlet property="s7" destination="SKe-bO-Ox0" id="QSs-GM-kyk"/>
+                        <outlet property="s8" destination="T4z-sx-CWw" id="FWz-IS-6hO"/>
+                        <outlet property="s9" destination="9YL-zM-sgk" id="Sya-Mn-W2g"/>
+                        <outlet property="whoseTurn" destination="tch-7S-F5C" id="joQ-GR-PpK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2i-I4-8OL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,7 +304,6 @@
     </scenes>
     <resources>
         <image name="Board" width="1078" height="1068"/>
-        <image name="Cross" width="300" height="297"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eZf-G5-TI2"/>
