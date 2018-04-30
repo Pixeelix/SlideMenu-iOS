@@ -69,6 +69,18 @@
         whoseTurn.text = @"It is X turn";
         NSLog(@"player is = %i", playerTurn);
     }
+    
+    if ([self checkForWin])
+    {
+        UIAlertController *someOneWon= [UIAlertController alertControllerWithTitle:@"There's a Winner" message:@"Someone won" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+            // Ok action example
+        }];
+        [someOneWon addAction:okAction];
+        [self presentViewController:someOneWon animated:YES completion:nil];
+        [self resetBoard];
+        
+    }
 }
 
 //the touch event for tic-tac-toe game
@@ -139,7 +151,46 @@
     //Reset the player and update the label
     playerTurn = 1;
     whoseTurn.text =@"X is going to start again.";
-    
+}
+
+-(BOOL) checkForWin
+{
+    //Horizontal wins
+    if((s1.image == s2.image) & (s2.image == s3.image) & (s1.image != NULL))
+    {
+        return TRUE;
+    }
+    if((s4.image == s5.image) & (s5.image == s6.image) & (s4.image != NULL))
+    {
+        return TRUE;
+    }
+    if((s7.image == s8.image) & (s8.image == s9.image) & (s7.image != NULL))
+    {
+        return TRUE;
+    }
+    //Vertical wins
+    if((s1.image == s4.image) & (s4.image == s7.image) & (s1.image != NULL))
+    {
+        return TRUE;
+    }
+    if((s2.image == s5.image) & (s5.image == s8.image) & (s2.image != NULL))
+    {
+        return TRUE;
+    }
+    if((s3.image == s6.image) & (s6.image == s9.image) & (s3.image != NULL))
+    {
+        return TRUE;
+    }
+    //Diagonal wins
+    if((s1.image == s5.image) & (s5.image == s9.image) & (s1.image != NULL))
+    {
+        return TRUE;
+    }
+    if((s3.image == s5.image) & (s5.image == s7.image) & (s3.image != NULL))
+    {
+        return TRUE;
+    }
+    return FALSE;
 }
 
 - (IBAction)resetBtn:(UIButton *)sender

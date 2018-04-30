@@ -149,7 +149,7 @@
                         <viewLayoutGuide key="safeArea" id="fdo-ne-GMR"/>
                     </view>
                     <navigationItem key="navigationItem" id="MIX-OT-LyS">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="ejk-m3-mKU"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt;- List" id="ejk-m3-mKU"/>
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="ejk-m3-mKU" id="Bwa-y1-9GH"/>
@@ -306,6 +306,6 @@
         <image name="Board" width="1078" height="1068"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eZf-G5-TI2"/>
+        <segue reference="LyK-Ad-uag"/>
     </inferredMetricsTieBreakers>
 </document>

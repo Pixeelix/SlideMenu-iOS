@@ -43,7 +43,7 @@
 
 -(void) updatePlayerInfo;
 -(void) resetBoard;
--(void) checkForWin;
+-(BOOL) checkForWin;
 
 
 @end
