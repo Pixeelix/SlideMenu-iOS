@@ -19,6 +19,7 @@
     
     int playerTurn;
     int movesCounter;
+    NSString *whoIsTheWinner;
     
     BOOL s1Clicked;
     BOOL s2Clicked;

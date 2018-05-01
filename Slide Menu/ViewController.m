@@ -85,10 +85,19 @@
     
     if ([self checkForWin])
     {
-        UIAlertController *someOneWon= [UIAlertController alertControllerWithTitle:@"There's a Winner" message:@"Someone won" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+        
+        UIAlertController *someOneWon= [UIAlertController
+                                        alertControllerWithTitle:@"There's a Winner"
+                                        message: whoIsTheWinner
+                                        preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                        style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction * action)
+        {
             // Ok action example
         }];
+        
         [someOneWon addAction:okAction];
         [self presentViewController:someOneWon animated:YES completion:nil];
         [self resetBoard];
@@ -220,36 +229,100 @@
     //Horizontal wins
     if((s1.image == s2.image) & (s2.image == s3.image) & (s1.image != NULL))
     {
+        if(s1.image == xImg)
+        {
+            whoIsTheWinner = @"X is the Winner";
+        }
+        else if (s1.image == oImg)
+        {
+            whoIsTheWinner = @"O is the Winner"; // O won the game
+        }
         return TRUE;
     }
     if((s4.image == s5.image) & (s5.image == s6.image) & (s4.image != NULL))
     {
+        if(s4.image == xImg)
+        {
+            whoIsTheWinner = @"X is the Winner"; // X won the game
+        }
+        else if (s4.image == oImg)
+        {
+            whoIsTheWinner = @"O is the Winner"; // O won the game
+        }
         return TRUE;
     }
     if((s7.image == s8.image) & (s8.image == s9.image) & (s7.image != NULL))
     {
+        if(s7.image == xImg)
+        {
+            whoIsTheWinner = @"X is the Winner"; // X won the game
+        }
+        else if (s7.image == oImg)
+        {
+            whoIsTheWinner = @"O is the Winner"; // O won the game
+        }
         return TRUE;
     }
     //Vertical wins
     if((s1.image == s4.image) & (s4.image == s7.image) & (s1.image != NULL))
     {
+        if(s1.image == xImg)
+        {
+            whoIsTheWinner = @"X is the Winner"; // X won the game
+        }
+        else if (s1.image == oImg)
+        {
+            whoIsTheWinner = @"O is the Winner"; // O won the game
+        }
         return TRUE;
     }
     if((s2.image == s5.image) & (s5.image == s8.image) & (s2.image != NULL))
     {
+        if(s2.image == xImg)
+        {
+            whoIsTheWinner = @"X is the Winner"; // X won the game
+        }
+        else if (s2.image == oImg)
+        {
+            whoIsTheWinner = @"O is the Winner"; // O won the game
+        }
         return TRUE;
     }
     if((s3.image == s6.image) & (s6.image == s9.image) & (s3.image != NULL))
     {
+        if(s3.image == xImg)
+        {
+            whoIsTheWinner = @"X is the Winner"; // X won the game
+        }
+        else if (s3.image == oImg)
+        {
+            whoIsTheWinner = @"O is the Winner"; // O won the game
+        }
         return TRUE;
     }
     //Diagonal wins
     if((s1.image == s5.image) & (s5.image == s9.image) & (s1.image != NULL))
     {
+        if(s1.image == xImg)
+        {
+            whoIsTheWinner = @"X is the Winner"; // X won the game
+        }
+        else if (s1.image == oImg)
+        {
+            whoIsTheWinner = @"O is the Winner"; // O won the game
+        }
         return TRUE;
     }
     if((s3.image == s5.image) & (s5.image == s7.image) & (s3.image != NULL))
     {
+        if(s3.image == xImg)
+        {
+            whoIsTheWinner = @"X is the Winner"; // X won the game
+        }
+        else if (s3.image == oImg)
+        {
+            whoIsTheWinner = @"O is the Winner"; // O won the game
+        }
         return TRUE;
     }
     return FALSE;
